@@ -15,7 +15,14 @@ namespace ConsoleApplication1
 
             Activity myact = new Activity();
             myact.Name = "Test";
+            myact.Date = new DateTime(2016, 03, 24);
+            ctx.Activities.Add(myact);
 
+            ctx.SaveChanges();
+
+            Console.WriteLine(ctx.Activities.FirstOrDefault().Name); 
+
+            Console.ReadKey();
         }
     }
 }
