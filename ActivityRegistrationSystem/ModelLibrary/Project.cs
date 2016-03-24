@@ -4,18 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModelLibrary.Project
-{
+namespace ModelLibrary
+{ 
+
     public class Project
     {
+        public Project()
+        {
+            this.Activities = new HashSet<Activity>();
+            this.Tags = new HashSet<Tag>();
+        }
+
+
         #region Fields
         private int _id;
         private string _name;
         private DateTime _deadline;
         private string _comment;
+        private ProjectType _projecttype;
+        private Client _client;
 
-        private IEnumerable<Activity> _activities;
-        private IEnumerable<Tag> _tags;
+        private ICollection<Activity> _activities;
+        private ICollection<Tag> _tags;
         #endregion
 
         #region Properties
@@ -31,7 +41,6 @@ namespace ModelLibrary.Project
                 _id = value;
             }
         }
-
         public string Name
         {
             get
@@ -44,7 +53,6 @@ namespace ModelLibrary.Project
                 _name = value;
             }
         }
-
         public DateTime Deadline
         {
             get
@@ -57,7 +65,6 @@ namespace ModelLibrary.Project
                 _deadline = value;
             }
         }
-
         public string Comment
         {
             get
@@ -70,8 +77,32 @@ namespace ModelLibrary.Project
                 _comment = value;
             }
         }
+        public virtual ProjectType ProjectType
+                {
+                    get
+                    {
+                        return _projecttype;
+                    }
 
-        public IEnumerable<Activity> Activities
+                    set
+                    {
+                        _projecttype = value;
+                    }
+                }
+        public virtual Client Client
+                {
+                    get
+                    {
+                        return _client;
+                    }
+
+                    set
+                    {
+                        _client = value;
+                    }
+                }
+
+        public virtual ICollection<Activity> Activities
         {
             get
             {
@@ -83,8 +114,7 @@ namespace ModelLibrary.Project
                 _activities = value;
             }
         }
-
-        public IEnumerable<Tag> Tags
+        public virtual ICollection<Tag> Tags
         {
             get
             {

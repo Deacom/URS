@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModelLibrary.Project
+namespace ModelLibrary
 {
-    public class ExamStudy : Project
+    public class ProjectType
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
