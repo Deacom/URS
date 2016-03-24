@@ -5,6 +5,10 @@ namespace ModelLibrary
 {
     public class Activity
     {
+        public Activity()
+        {
+            this.Sources = new HashSet<Source.Source>();
+        }
 
         #region Fields
         private int _id;
@@ -12,7 +16,7 @@ namespace ModelLibrary
         private DateTime _date;
         private int _minutes;
 
-        private IEnumerable<Source.Source> _sources;
+        private ICollection<Source.Source> _sources;
         #endregion
 
         #region Properties
@@ -65,7 +69,7 @@ namespace ModelLibrary
             }
         }
 
-        public IEnumerable<Source.Source> Sources
+        public virtual ICollection<Source.Source> Sources
         {
             get
             {

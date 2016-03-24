@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModelLibrary.Project
+namespace ModelLibrary.Source
 {
-    public class PaidProject : Project
+    public class PageType
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

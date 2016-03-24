@@ -8,5 +8,8 @@ namespace ModelLibrary.Source
 {
     public class Book : Source
     {
+        public int? Chapter { get; set; }
+        public int? StartPage { get; set; }
+        public int? EndPage { get; set; }
     }
 }
