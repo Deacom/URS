@@ -5,6 +5,7 @@ namespace ModelLibrary
 {
     public class Activity
     {
+        // Daniel was hier
         #region Fields
         private int _id;
         private string _name;
