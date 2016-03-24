@@ -4,7 +4,9 @@ using System.Collections.Generic;
 namespace ModelLibrary
 {
     public class Activity
-    { //noel is hier
+    {
+        // Daniel was hier
+        //noel is hier
         #region Fields
         private int _id;
         private string _name;
